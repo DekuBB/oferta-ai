@@ -1,0 +1,2 @@
+import { NextResponse } from "next/server";
+export async function GET(){return NextResponse.json({ok:true,service:"oferta-ai",ai:Boolean(process.env.OPENAI_API_KEY),telegram:Boolean(process.env.TELEGRAM_BOT_TOKEN)});}

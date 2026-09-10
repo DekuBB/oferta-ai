@@ -1,0 +1,23 @@
+export const offerJsonSchema = {
+  type:"object",
+  additionalProperties:false,
+  properties:{
+    title:{type:"string"},
+    category:{type:"string"},
+    brand:{type:"string"},
+    model:{type:"string"},
+    condition:{type:"string"},
+    color:{type:"string"},
+    material:{type:"string"},
+    included_items:{type:"array",items:{type:"string"}},
+    specifications:{type:"array",items:{type:"string"}},
+    visible_issues:{type:"array",items:{type:"string"}},
+    description:{type:"string"},
+    suggested_price:{type:["number","null"]},
+    price_min:{type:["number","null"]},
+    price_max:{type:["number","null"]},
+    confidence:{type:"number"},
+    unknown_fields:{type:"array",items:{type:"string"}}
+  },
+  required:["title","category","brand","model","condition","color","material","included_items","specifications","visible_issues","description","suggested_price","price_min","price_max","confidence","unknown_fields"]
+};
